@@ -22,9 +22,10 @@
 ​
 
 <body class="zc-body">
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <!-- Navbar content -->
-  </nav>
+  <div class="w-50 p-3">
+    <img src="resources/greenland.png" style='height: auto; width: 100%; object-fit: contain'>
+  </div>
+  
   ​
   <div id="myChart" class="chart--container"></div>
 
@@ -44,21 +45,22 @@
         marginTop: '7px',
         fontColor: '#E3E3E5'
       },
-      legend: {
-        align: 'center',
-        backgroundColor: 'none',
-        borderWidth: '0px',
-        item: {
-          cursor: 'hand',
-          fontColor: '#E3E3E5'
-        },
-        marker: {
-          type: 'circle',
-          borderWidth: '0px',
-          cursor: 'hand'
-        },
-        verticalAlign: 'top'
-      },
+      legend: {},
+      // legend: {
+      //   align: 'center',
+      //   backgroundColor: 'none',
+      //   borderWidth: '0px',
+      //   item: {
+      //     cursor: 'hand',
+      //     fontColor: '#E3E3E5'
+      //   },
+      //   marker: {
+      //     type: 'circle',
+      //     borderWidth: '0px',
+      //     cursor: 'hand'
+      //   },
+      //   verticalAlign: 'top'
+      // },
       plot: {
         aspect: 'spline',
         lineWidth: '4px',
