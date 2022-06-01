@@ -3,14 +3,11 @@
 <html class="zc-html">
 
 <head>
-  <meta charset="utf-8">
-  <title>ZingSoft Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">  
+  <title>Massenbilanz in Grönland</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
-  <style>
-    .zc-body {
-      background: #2C2C39;
-    }
-
+  <style>   
     .chart--container {
       height: 100%;
       width: 100%;
@@ -25,15 +22,33 @@
 ​
 
 <body class="zc-body">
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav>
   ​
   <div id="myChart" class="chart--container"></div>
 
   <script>    
     let chartConfig = {
+      gui: {
+        contextMenu: {
+          docked: true,
+          position: 'right',
+          backgroundColor: 'none',
+          // button: {
+          //   visible: true
+          // },
+          // item:{
+          //   backgroundColor:"#333",
+          //   borderWidth: 8,
+          //   color:"#fff"
+          // }
+        }
+      },
       type: 'line',
-      backgroundColor: '#2C2C39',
+      backgroundColor: '#FFFFFF',
       title: {
-        text: 'Time Series Data with null values',
+        // text: 'Time Series Data with null values',
         adjustLayout: true,
         marginTop: '7px',
         fontColor: '#E3E3E5'
@@ -55,7 +70,7 @@
       },
       plot: {
         aspect: 'spline',
-        lineWidth: '2px',
+        lineWidth: '4px',
         marker: {
           borderWidth: '0px',
           size: '5px'
@@ -76,7 +91,7 @@
           all: '%M<br>%Y'
         },
         zooming: true,
-        zoomTo: [0, 15]
+        zoomTo: [0, 20000]
       },
       scaleY: {
         guide: {
@@ -135,7 +150,7 @@
         borderWidth: '1px',
         cursor: 'hand',
         label: {
-          text: 'View All',
+          text: 'Home',
           bold: true,
           fontColor: '#E3E3E5',
           fontSize: '12px'
@@ -204,6 +219,15 @@
       width: '100%',
     });
   </script>
+
+<div class="text-center p-0" style="background-color: rgba(0, 0, 0, 0.2);">
+  <small>
+    Data provided by TU Dresden:<br>
+    Groh, A., & Horwath, M. (2016). The method of tailored sensitivity kernels for GRACE mass change estimates. Geophysical Research Abstracts, 18, EGU2016-12065.
+  </small>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
 </html>
