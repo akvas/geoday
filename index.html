@@ -40,6 +40,7 @@
 
     var map = L.map('map', { zoomControl: false }).setView([76.7, -42.6], 2);
     map.dragging.disable();
+    map.doubleClickZoom.disable(); 
   
     var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       minZoom: 2,
